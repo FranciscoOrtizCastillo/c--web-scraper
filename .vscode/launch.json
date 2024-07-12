@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "name": "C++ Launch (OSX)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/main",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": []
+    }
+  ]
+}
