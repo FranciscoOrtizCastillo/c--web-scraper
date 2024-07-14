@@ -9,7 +9,7 @@ git clone https://github.com/microsoft/vcpkg
 
 # Añadir vcpkg al PATH
 # en el archivo .zshrc 
-#export VCPKG_ROOT=~/vcpkg
+#export VCPKG_ROOT=/Users/$USER/vcpkg
 #PATH=$VCPKG_ROOT:$PATH
 
 mkdir c++-web-scraper
