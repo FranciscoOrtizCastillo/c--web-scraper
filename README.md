@@ -7,22 +7,21 @@
 git clone https://github.com/microsoft/vcpkg
 ./vcpkg/bootstrap-vcpkg.sh
 
-# Añadir /dev/vcpkg al PATH
-# en el archivo /Users/usr_desarrollo/.zshrc al final por ejemplo
-# export PATH=$PATH:/Users/usr_desarrollo/Proyectos/Personal/vcpkg
+# Añadir vcpkg al PATH
+# en el archivo .zshrc 
+#export VCPKG_ROOT=~/vcpkg
+#PATH=$VCPKG_ROOT:$PATH
 
 mkdir c++-web-scraper
 cd c++-web-scraper
 
-vcpkg install cpr libxml2 --triplet=x64-osx
-# En linux :
-#cpkg install cpr libxml2 --triplet=x64-linux
+vcpkg new --application
+vcpkg add port cpr libxml2 --triplet=x64-osx
 
-vcpkg integrate install
+cmake --preset=default
+cmake --build build
+./build/main
 
-
-cd build
-main
 ```
 
 
@@ -31,3 +30,4 @@ En la consola del Navegador, una vez abierto www.race.es
 $x("//div[contains(@class, 'vc_gitem-zone-mini')]")
 
 Mostrara los 4 elementos
+
